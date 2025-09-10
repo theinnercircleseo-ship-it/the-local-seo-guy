@@ -130,12 +130,22 @@
   h3,
   h4,
   h5,
-  h6,
+  h6 {
+    user-select: none;
+    cursor: default;
+  }
+
+  /* Allow text selection only for actual text content */
   p,
   span,
-  div {
+  li,
+  td,
+  th,
+  label,
+  input,
+  textarea {
     user-select: text;
-    cursor: default;
+    cursor: text;
   }
 
   /* Ensure only interactive elements have pointer cursor */
@@ -143,7 +153,9 @@
   a,
   [role="button"],
   input[type="submit"],
-  input[type="button"] {
-    cursor: pointer;
+  input[type="button"],
+  .cursor-pointer {
+    cursor: pointer !important;
+    user-select: none;
   }
 }
