@@ -123,4 +123,27 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  /* Fix clickable appearance on headings and text */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  span,
+  div {
+    user-select: text;
+    cursor: default;
+  }
+
+  /* Ensure only interactive elements have pointer cursor */
+  button,
+  a,
+  [role="button"],
+  input[type="submit"],
+  input[type="button"] {
+    cursor: pointer;
+  }
 }

@@ -39,7 +39,7 @@ export function CaseStudySection() {
                       alt="Before: Poor local search rankings with average rank 9.61"
                       width={400}
                       height={300}
-                      className="rounded-lg shadow-md w-full"
+                      className="rounded-lg shadow-md w-full h-auto object-contain"
                     />
                   </div>
 
@@ -73,7 +73,7 @@ export function CaseStudySection() {
                       alt="After: Excellent local search rankings with average rank 3.57"
                       width={400}
                       height={300}
-                      className="rounded-lg shadow-md w-full"
+                      className="rounded-lg shadow-md w-full h-auto object-contain"
                     />
                   </div>
 
