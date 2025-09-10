@@ -20,7 +20,9 @@ export function Footer() {
                     <circle cx="24" cy="20" r="4" fill="currentColor" className="opacity-20" />
                   </svg>
                 </div>
-                <span className="font-bold text-xl text-background">The Local Window Guy</span>
+                <span className="font-bold text-xl text-background">
+                  The <span className="text-blue-400">Local SEO</span> Guy
+                </span>
               </div>
             </div>
             <p className="text-background/80">
@@ -122,7 +124,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-background/20 mt-12 pt-8 text-center text-background/60">
-          <p>&copy; 2024 The Local Window Guy. All rights reserved.</p>
+          <p>&copy; 2024 The Local SEO Guy. All rights reserved.</p>
         </div>
       </div>
     </footer>

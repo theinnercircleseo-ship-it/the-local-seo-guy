@@ -25,7 +25,9 @@ export function Navigation() {
                   <circle cx="24" cy="20" r="4" fill="white" />
                 </svg>
               </div>
-              <span className="font-bold text-xl text-foreground">The Local Window Guy</span>
+              <span className="font-bold text-xl text-foreground">
+                The <span className="text-primary">Local SEO</span> Guy
+              </span>
             </div>
           </Link>
 
