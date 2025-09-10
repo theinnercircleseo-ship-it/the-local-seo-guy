@@ -9,27 +9,18 @@ export function Footer() {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-3">
                 <div className="relative">
-                  <svg width="40" height="40" viewBox="0 0 40 40" className="text-background">
-                    {/* Map pin */}
-                    <path d="M20 8c-4.4 0-8 3.6-8 8 0 2.8 8 16 8 16s8-13.2 8-16c0-4.4-3.6-8-8-8z" fill="currentColor" />
-                    <circle cx="20" cy="16" r="3" fill="currentColor" className="opacity-20" />
-
-                    {/* Upward trending graph bars integrated into pin base */}
-                    <rect x="14" y="24" width="2" height="4" fill="currentColor" />
-                    <rect x="17" y="22" width="2" height="6" fill="currentColor" />
-                    <rect x="20" y="20" width="2" height="8" fill="currentColor" />
-                    <rect x="23" y="18" width="2" height="10" fill="currentColor" />
-
-                    {/* Trending arrow */}
-                    <path d="M26 20 L30 16 M26 16 L30 16 L30 20" stroke="currentColor" strokeWidth="1.5" fill="none" />
+                  <svg width="48" height="48" viewBox="0 0 48 48" className="text-background">
+                    {/* Simple map pin */}
+                    <path
+                      d="M24 10c-5.5 0-10 4.5-10 10 0 3.5 10 20 10 20s10-16.5 10-20c0-5.5-4.5-10-10-10z"
+                      fill="currentColor"
+                    />
+                    <circle cx="24" cy="20" r="4" fill="currentColor" className="opacity-20" />
                   </svg>
                 </div>
-                <div className="flex flex-col">
-                  <span className="font-bold text-lg text-background leading-tight">The Local</span>
-                  <span className="font-bold text-lg text-background leading-tight">SEO Guy</span>
-                </div>
+                <span className="font-bold text-xl text-background">The Local Window Guy</span>
               </div>
             </div>
             <p className="text-background/80">
@@ -131,7 +122,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-background/20 mt-12 pt-8 text-center text-background/60">
-          <p>&copy; 2024 The Local SEO Guy. All rights reserved.</p>
+          <p>&copy; 2024 The Local Window Guy. All rights reserved.</p>
         </div>
       </div>
     </footer>
