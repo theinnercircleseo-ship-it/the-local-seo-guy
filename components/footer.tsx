@@ -8,11 +8,20 @@ export function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <div className="bg-primary text-primary-foreground p-2 rounded-lg">
-                <span className="font-bold text-lg">LSG</span>
+            <div className="flex items-center space-x-3">
+              <div className="flex items-center space-x-2">
+                <div className="relative">
+                  <svg width="40" height="40" viewBox="0 0 40 40" className="text-background">
+                    <circle cx="20" cy="20" r="18" fill="currentColor" className="opacity-10" />
+                    <path d="M20 8l-8 8h5v12h6V16h5l-8-8z" fill="currentColor" />
+                    <circle cx="20" cy="30" r="2" fill="currentColor" />
+                  </svg>
+                </div>
+                <div className="flex flex-col">
+                  <span className="font-bold text-lg text-background leading-tight">The Local</span>
+                  <span className="font-bold text-lg text-background leading-tight">SEO Guy</span>
+                </div>
               </div>
-              <span className="font-bold text-xl">The Local SEO Guy</span>
             </div>
             <p className="text-background/80">
               Helping local businesses dominate search results and grow their customer base through proven SEO

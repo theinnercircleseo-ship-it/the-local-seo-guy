@@ -13,11 +13,20 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="bg-primary text-primary-foreground p-2 rounded-lg">
-              <span className="font-bold text-lg">LSG</span>
+          <Link href="/" className="flex items-center space-x-3">
+            <div className="flex items-center space-x-2">
+              <div className="relative">
+                <svg width="40" height="40" viewBox="0 0 40 40" className="text-primary">
+                  <circle cx="20" cy="20" r="18" fill="currentColor" className="opacity-10" />
+                  <path d="M20 8l-8 8h5v12h6V16h5l-8-8z" fill="currentColor" />
+                  <circle cx="20" cy="30" r="2" fill="currentColor" />
+                </svg>
+              </div>
+              <div className="flex flex-col">
+                <span className="font-bold text-lg text-foreground leading-tight">The Local</span>
+                <span className="font-bold text-lg text-primary leading-tight">SEO Guy</span>
+              </div>
             </div>
-            <span className="font-bold text-xl text-foreground">The Local SEO Guy</span>
           </Link>
 
           {/* Desktop Navigation */}
