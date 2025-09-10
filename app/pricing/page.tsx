@@ -11,7 +11,7 @@ export default function PricingPage() {
   const plans = [
     {
       name: "Starter",
-      price: "$997",
+      price: "$797",
       period: "/month",
       description: "Perfect for small local businesses just getting started with SEO",
       popular: false,
@@ -27,7 +27,7 @@ export default function PricingPage() {
     },
     {
       name: "Professional",
-      price: "$1,597",
+      price: "$1,297",
       period: "/month",
       description: "Most popular choice for established businesses ready to dominate local search",
       popular: true,
@@ -46,7 +46,7 @@ export default function PricingPage() {
     },
     {
       name: "Enterprise",
-      price: "$2,197",
+      price: "$1,997",
       period: "/month",
       description: "Comprehensive solution for businesses serious about market domination",
       popular: false,
