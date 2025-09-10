@@ -17,52 +17,18 @@ export function Navigation() {
             <div className="flex items-center space-x-2">
               <div className="relative">
                 <svg width="40" height="40" viewBox="0 0 40 40" className="text-primary">
-                  {/* Background circle */}
-                  <circle cx="20" cy="20" r="18" fill="currentColor" className="opacity-5" />
+                  {/* Map pin */}
+                  <path d="M20 8c-4.4 0-8 3.6-8 8 0 2.8 8 16 8 16s8-13.2 8-16c0-4.4-3.6-8-8-8z" fill="currentColor" />
+                  <circle cx="20" cy="16" r="3" fill="white" />
 
-                  {/* Map pins showing ranking progression - ascending from right to left */}
-                  <g>
-                    {/* Pin 3 (lowest) - smaller, more transparent */}
-                    <path
-                      d="M32 28c0-2.2-1.8-4-4-4s-4 1.8-4 4c0 1.5 4 6 4 6s4-4.5 4-6z"
-                      fill="currentColor"
-                      className="opacity-30"
-                    />
-                    <circle cx="28" cy="28" r="1.5" fill="white" className="opacity-60" />
-                    <text x="28" y="31" textAnchor="middle" fontSize="8" fill="currentColor" className="opacity-40">
-                      3
-                    </text>
+                  {/* Upward trending graph bars integrated into pin base */}
+                  <rect x="14" y="24" width="2" height="4" fill="currentColor" />
+                  <rect x="17" y="22" width="2" height="6" fill="currentColor" />
+                  <rect x="20" y="20" width="2" height="8" fill="currentColor" />
+                  <rect x="23" y="18" width="2" height="10" fill="currentColor" />
 
-                    {/* Pin 2 (middle) - medium size */}
-                    <path
-                      d="M24 20c0-2.5-2-4.5-4.5-4.5S15 17.5 15 20c0 1.8 4.5 7 4.5 7s4.5-5.2 4.5-7z"
-                      fill="currentColor"
-                      className="opacity-60"
-                    />
-                    <circle cx="19.5" cy="20" r="1.8" fill="white" className="opacity-80" />
-                    <text x="19.5" y="23.5" textAnchor="middle" fontSize="9" fill="currentColor" className="opacity-60">
-                      2
-                    </text>
-
-                    {/* Pin 1 (highest) - largest, most prominent */}
-                    <path
-                      d="M16 12c0-3-2.5-5.5-5.5-5.5S5 9 5 12c0 2.2 5.5 8.5 5.5 8.5S16 14.2 16 12z"
-                      fill="currentColor"
-                    />
-                    <circle cx="10.5" cy="12" r="2.2" fill="white" />
-                    <text x="10.5" y="16" textAnchor="middle" fontSize="10" fill="currentColor" className="font-bold">
-                      1
-                    </text>
-                  </g>
-
-                  {/* Upward trending arrow */}
-                  <path
-                    d="M30 32 L12 14 M8 18 L12 14 L16 18"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    fill="none"
-                    className="opacity-70"
-                  />
+                  {/* Trending arrow */}
+                  <path d="M26 20 L30 16 M26 16 L30 16 L30 20" stroke="currentColor" strokeWidth="1.5" fill="none" />
                 </svg>
               </div>
               <div className="flex flex-col">
