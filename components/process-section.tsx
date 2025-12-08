@@ -109,7 +109,7 @@ export function ProcessSection() {
                 asChild
                 variant="outline"
                 size="lg"
-                className="border-green-600 text-green-600 hover:bg-green-50 bg-transparent"
+                className="border-green-600 text-green-600 hover:bg-green-600 hover:text-white bg-transparent transition-colors"
               >
                 <Link href="/case-studies">View Our Case Studies</Link>
               </Button>

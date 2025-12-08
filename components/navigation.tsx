@@ -51,26 +51,33 @@ export function Navigation() {
               onMouseEnter={() => setIsServicesOpen(true)}
               onMouseLeave={() => setIsServicesOpen(false)}
             >
-              <button
-                className={`flex items-center space-x-1 text-foreground hover:text-primary transition-colors pb-1 cursor-pointer ${
+              <Link
+                href="/services"
+                className={`flex items-center space-x-1 text-foreground hover:text-primary transition-colors pb-1 !cursor-pointer select-none ${
                   isActive("/services") ? "border-b-2 border-primary text-primary font-medium" : ""
                 }`}
               >
-                <span>Services</span>
-                <ChevronDown className="h-4 w-4" />
-              </button>
+                <span className="!cursor-pointer">Services</span>
+                <ChevronDown className="h-4 w-4 !cursor-pointer" />
+              </Link>
 
               {isServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-64 bg-white border border-border rounded-lg shadow-lg py-2">
-                  {services.map((service) => (
-                    <Link
-                      key={service.href}
-                      href={service.href}
-                      className="block px-4 py-2 text-foreground hover:bg-primary/5 hover:text-primary transition-colors cursor-pointer"
-                    >
-                      {service.name}
-                    </Link>
-                  ))}
+                <div
+                  className="absolute top-full left-0 pt-2 w-64"
+                  onMouseEnter={() => setIsServicesOpen(true)}
+                  onMouseLeave={() => setIsServicesOpen(false)}
+                >
+                  <div className="bg-white border border-border rounded-lg shadow-lg py-2">
+                    {services.map((service) => (
+                      <Link
+                        key={service.href}
+                        href={service.href}
+                        className="block px-4 py-2 text-foreground hover:bg-primary/5 hover:text-primary transition-colors cursor-pointer"
+                      >
+                        {service.name}
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               )}
             </div>

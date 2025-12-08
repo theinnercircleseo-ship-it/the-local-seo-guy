@@ -20,7 +20,7 @@ export function CaseStudySection() {
         </div>
 
         <div className="max-w-6xl mx-auto">
-          <Card className="overflow-hidden">
+          <Card className="overflow-hidden shadow-none">
             <CardContent className="p-0">
               <div className="grid md:grid-cols-2 gap-0">
                 {/* Before */}

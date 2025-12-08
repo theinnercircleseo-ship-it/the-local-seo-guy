@@ -8,7 +8,11 @@ export function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <Link href="/" className="flex items-center space-x-3 cursor-pointer group w-fit">
+            <Link
+              href="/"
+              className="inline-flex items-center space-x-3 group hover:text-background transition-colors"
+              style={{ cursor: "pointer" }}
+            >
               <div className="relative">
                 <svg width="48" height="48" viewBox="0 0 48 48" className="text-background">
                   {/* Map pin with proper inner hole */}
@@ -24,6 +28,7 @@ export function Footer() {
                 The <span className="text-blue-400">Local SEO</span> Guy
               </span>
             </Link>
+            {/* </CHANGE> */}
             <p className="text-background/80">
               Helping local businesses dominate search results and grow their customer base through proven SEO
               strategies.

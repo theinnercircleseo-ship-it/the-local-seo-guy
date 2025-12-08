@@ -5,7 +5,7 @@ import type React from "react"
 import { useState } from "react"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -145,14 +145,15 @@ export default function ContactPage() {
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Get in Touch Form */}
             <div>
+              <div className="mb-8">
+                <h2 className="text-3xl font-bold text-foreground mb-4">Get in Touch</h2>
+                <p className="text-muted-foreground">
+                  Fill out the form below and we'll send you a comprehensive SEO audit within 24 hours.
+                </p>
+              </div>
+
               <Card>
-                <CardHeader>
-                  <CardTitle className="text-2xl">Get in Touch</CardTitle>
-                  <p className="text-muted-foreground">
-                    Fill out the form below and we'll send you a comprehensive SEO audit within 24 hours.
-                  </p>
-                </CardHeader>
-                <CardContent>
+                <CardContent className="pt-6">
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-4">
                       <div className="space-y-2">
@@ -255,9 +256,9 @@ export default function ContactPage() {
 
             {/* How to Reach Us - Contact Information */}
             <div className="space-y-8">
-              <div>
-                <h2 className="text-3xl font-bold text-foreground mb-6">How to Reach Us</h2>
-                <p className="text-muted-foreground mb-8">
+              <div className="mb-8">
+                <h2 className="text-3xl font-bold text-foreground mb-4">How to Reach Us</h2>
+                <p className="text-muted-foreground">
                   Have questions? We're here to help. Reach out to us using any of the methods below, and we'll get back
                   to you as soon as possible.
                 </p>

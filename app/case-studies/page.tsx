@@ -112,7 +112,7 @@ export default function CaseStudiesPage() {
                     </div>
                   </div>
 
-                  <div className="bg-white rounded-xl p-6 shadow-lg border-2 border-green-500">
+                  <div className="bg-white rounded-xl p-6 shadow-lg">
                     <h3 className="font-semibold text-lg mb-4 text-center text-green-600">
                       After - Average Rank: 3.57
                     </h3>
