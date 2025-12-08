@@ -60,16 +60,16 @@ export function ServicesOverview() {
           {services.map((service) => {
             const Icon = service.icon
             return (
-              <Card key={service.title} className="group hover:shadow-lg transition-shadow duration-300">
+              <Card key={service.title} className="group hover:shadow-lg transition-shadow duration-300 flex flex-col">
                 <CardHeader>
                   <div className="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                     <Icon className="h-6 w-6 text-primary group-hover:text-primary-foreground" />
                   </div>
                   <CardTitle className="text-xl">{service.title}</CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-base mb-4">{service.description}</CardDescription>
-                  <Button asChild variant="outline" className="w-full bg-transparent">
+                <CardContent className="flex flex-col flex-1">
+                  <CardDescription className="text-base mb-4 flex-1">{service.description}</CardDescription>
+                  <Button asChild variant="outline" className="w-full bg-transparent mt-auto">
                     <Link href={service.href}>Learn More</Link>
                   </Button>
                 </CardContent>

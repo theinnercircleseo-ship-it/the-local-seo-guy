@@ -12,23 +12,19 @@ export function Navigation() {
     <nav className="bg-background border-b border-border sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3">
-            <div className="flex items-center space-x-3">
-              <div className="relative">
-                <svg width="48" height="48" viewBox="0 0 48 48" className="text-primary">
-                  {/* Simple map pin */}
-                  <path
-                    d="M24 10c-5.5 0-10 4.5-10 10 0 3.5 10 20 10 20s10-16.5 10-20c0-5.5-4.5-10-10-10z"
-                    fill="currentColor"
-                  />
-                  <circle cx="24" cy="20" r="4" fill="white" />
-                </svg>
-              </div>
-              <span className="font-bold text-xl text-foreground">
-                The <span className="text-primary">Local SEO</span> Guy
-              </span>
+          <Link href="/" className="flex items-center space-x-3 cursor-pointer select-none group">
+            <div className="relative">
+              <svg width="48" height="48" viewBox="0 0 48 48" className="text-primary">
+                <path
+                  d="M24 10c-5.5 0-10 4.5-10 10 0 3.5 10 20 10 20s10-16.5 10-20c0-5.5-4.5-10-10-10z"
+                  fill="currentColor"
+                />
+                <circle cx="24" cy="20" r="4" fill="white" />
+              </svg>
             </div>
+            <span className="font-bold text-xl text-foreground cursor-pointer">
+              The <span className="text-primary">Local SEO</span> Guy
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -41,6 +37,9 @@ export function Navigation() {
             </Link>
             <Link href="/pricing" className="text-foreground hover:text-primary transition-colors">
               Pricing
+            </Link>
+            <Link href="/case-studies" className="text-foreground hover:text-primary transition-colors">
+              Case Studies
             </Link>
             <Link href="/contact" className="text-foreground hover:text-primary transition-colors">
               Contact
@@ -86,6 +85,13 @@ export function Navigation() {
                 onClick={() => setIsOpen(false)}
               >
                 Pricing
+              </Link>
+              <Link
+                href="/case-studies"
+                className="block px-3 py-2 text-foreground hover:text-primary transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                Case Studies
               </Link>
               <Link
                 href="/contact"

@@ -4,8 +4,14 @@ import Link from "next/link"
 
 export function HeroSection() {
   return (
-    <section className="bg-primary text-primary-foreground py-20 lg:py-32">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative bg-primary text-primary-foreground py-20 lg:py-32 overflow-hidden">
+      {/* Abstract Background */}
+      <div className="absolute inset-0 z-0">
+        <img src="/abstract-hero-background.png" alt="" className="w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-primary/40" />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Content */}
           <div className="space-y-8">

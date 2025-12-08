@@ -37,11 +37,15 @@ export function CTASection() {
               <div className="space-y-6">
                 <div className="bg-muted rounded-lg p-6 text-center">
                   <div className="text-4xl font-bold text-primary mb-2">FREE</div>
-                  <div className="text-lg font-medium text-foreground mb-4">SEO Audit & Strategy Call</div>
+                  <div className="text-lg font-medium text-foreground mb-4">SEO Audit & Consultation</div>
                   <div className="text-muted-foreground mb-6">Usually $500 - Limited time offer</div>
 
                   <div className="space-y-4">
-                    <Button asChild size="lg" className="w-full text-lg bg-orange-700 hover:bg-orange-800 text-white">
+                    <Button
+                      asChild
+                      size="lg"
+                      className="w-full text-lg bg-orange-700 hover:bg-orange-800 text-primary-foreground"
+                    >
                       <Link href="/contact">Get Your Free Audit Now</Link>
                     </Button>
 

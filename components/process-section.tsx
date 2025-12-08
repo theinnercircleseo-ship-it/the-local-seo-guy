@@ -2,6 +2,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Search, Target, Rocket, Shield } from "lucide-react"
+import Link from "next/link"
 
 export function ProcessSection() {
   const steps = [
@@ -59,23 +60,28 @@ export function ProcessSection() {
           {steps.map((step, index) => {
             const Icon = step.icon
             return (
-              <Card key={index} className="relative overflow-hidden group hover:shadow-lg transition-all duration-300">
-                <CardContent className="p-8 text-center">
+              <Card
+                key={index}
+                className="relative overflow-hidden group hover:shadow-lg transition-all duration-300 flex flex-col"
+              >
+                <CardContent className="p-8 text-center flex flex-col flex-1">
                   <div className="absolute top-4 right-4 text-6xl font-bold text-primary/10 group-hover:text-primary/20 transition-colors">
                     {step.number}
                   </div>
 
-                  <div className="relative z-10">
+                  <div className="relative z-10 flex flex-col flex-1">
                     <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/20 transition-colors">
                       <Icon className="w-8 h-8 text-primary" />
                     </div>
 
-                    <h3 className="text-xl font-semibold mb-4 text-balance">{step.title}</h3>
-                    <p className="text-muted-foreground mb-4 text-balance leading-relaxed">{step.description}</p>
+                    <h3 className="text-lg font-semibold mb-4 text-balance">{step.title}</h3>
+                    <p className="text-muted-foreground mb-4 text-balance leading-relaxed flex-1">{step.description}</p>
 
-                    <Badge variant="secondary" className="text-foreground bg-muted">
-                      {step.highlight}
-                    </Badge>
+                    <div className="mt-auto">
+                      <Badge variant="secondary" className="text-foreground bg-muted">
+                        {step.highlight}
+                      </Badge>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
@@ -94,15 +100,16 @@ export function ProcessSection() {
               every penny. No questions asked.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white">
-                Start Your Free Audit
+              <Button asChild size="lg" className="bg-green-600 hover:bg-green-700 text-white">
+                <Link href="/contact">Start Your Free Audit</Link>
               </Button>
               <Button
+                asChild
                 variant="outline"
                 size="lg"
                 className="border-green-600 text-green-600 hover:bg-green-50 bg-transparent"
               >
-                View Our Case Studies
+                <Link href="/case-studies">View Our Case Studies</Link>
               </Button>
             </div>
           </div>
