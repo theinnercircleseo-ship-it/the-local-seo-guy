@@ -4,16 +4,26 @@ import { useState } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
-import { Menu, X, Phone } from "lucide-react"
+import { Menu, X, Phone, ChevronDown } from "lucide-react"
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
+  const [isServicesOpen, setIsServicesOpen] = useState(false)
   const pathname = usePathname()
 
   const isActive = (path: string) => {
     if (path === "/") return pathname === "/"
     return pathname.startsWith(path)
   }
+
+  const services = [
+    { name: "Local SEO", href: "/services/local-seo" },
+    { name: "Google Business Profile", href: "/services/google-business-profile" },
+    { name: "Local Link Building", href: "/services/local-link-building" },
+    { name: "Review Management", href: "/services/review-management" },
+    { name: "SEO Audits", href: "/services/seo-audits" },
+    { name: "Citation Building", href: "/services/citation-building" },
+  ]
 
   return (
     <nav className="bg-background border-b border-border sticky top-0 z-50">
@@ -36,14 +46,35 @@ export function Navigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link
-              href="/services"
-              className={`text-foreground hover:text-primary transition-colors pb-1 ${
-                isActive("/services") ? "border-b-2 border-primary text-primary font-medium" : ""
-              }`}
+            <div
+              className="relative"
+              onMouseEnter={() => setIsServicesOpen(true)}
+              onMouseLeave={() => setIsServicesOpen(false)}
             >
-              Services
-            </Link>
+              <button
+                className={`flex items-center space-x-1 text-foreground hover:text-primary transition-colors pb-1 cursor-pointer ${
+                  isActive("/services") ? "border-b-2 border-primary text-primary font-medium" : ""
+                }`}
+              >
+                <span>Services</span>
+                <ChevronDown className="h-4 w-4" />
+              </button>
+
+              {isServicesOpen && (
+                <div className="absolute top-full left-0 mt-2 w-64 bg-white border border-border rounded-lg shadow-lg py-2">
+                  {services.map((service) => (
+                    <Link
+                      key={service.href}
+                      href={service.href}
+                      className="block px-4 py-2 text-foreground hover:bg-primary/5 hover:text-primary transition-colors cursor-pointer"
+                    >
+                      {service.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
             <Link
               href="/about"
               className={`text-foreground hover:text-primary transition-colors pb-1 ${

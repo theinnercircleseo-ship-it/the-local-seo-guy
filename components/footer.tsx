@@ -8,23 +8,22 @@ export function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-3">
-              <div className="flex items-center space-x-3">
-                <div className="relative">
-                  <svg width="48" height="48" viewBox="0 0 48 48" className="text-background">
-                    {/* Simple map pin */}
-                    <path
-                      d="M24 10c-5.5 0-10 4.5-10 10 0 3.5 10 20 10 20s10-16.5 10-20c0-5.5-4.5-10-10-10z"
-                      fill="currentColor"
-                    />
-                    <circle cx="24" cy="20" r="4" fill="currentColor" className="opacity-20" />
-                  </svg>
-                </div>
-                <span className="font-bold text-xl text-background">
-                  The <span className="text-blue-400">Local SEO</span> Guy
-                </span>
+            <Link href="/" className="flex items-center space-x-3 cursor-pointer group w-fit">
+              <div className="relative">
+                <svg width="48" height="48" viewBox="0 0 48 48" className="text-background">
+                  {/* Map pin with proper inner hole */}
+                  <path
+                    d="M24 10c-5.5 0-10 4.5-10 10 0 3.5 10 20 10 20s10-16.5 10-20c0-5.5-4.5-10-10-10z"
+                    fill="currentColor"
+                  />
+                  {/* Inner hole - using fill with the footer background color */}
+                  <circle cx="24" cy="20" r="4" fill="#0a0a0a" />
+                </svg>
               </div>
-            </div>
+              <span className="font-bold text-xl text-background">
+                The <span className="text-blue-400">Local SEO</span> Guy
+              </span>
+            </Link>
             <p className="text-background/80">
               Helping local businesses dominate search results and grow their customer base through proven SEO
               strategies.
@@ -124,7 +123,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-background/20 mt-12 pt-8 text-center text-background/60">
-          <p>&copy; 2024 The Local SEO Guy. All rights reserved.</p>
+          <p>&copy; 2025 The Local SEO Guy. All rights reserved.</p>
         </div>
       </div>
     </footer>

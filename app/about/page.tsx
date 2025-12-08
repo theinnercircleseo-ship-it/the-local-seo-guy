@@ -31,14 +31,14 @@ export default function AboutPage() {
   ]
 
   const stats = [
-    { number: "500+", label: "Local Businesses Helped" },
+    { number: "100+", label: "Local Businesses Helped" },
     { number: "300%", label: "Average Traffic Increase" },
     { number: "90%", label: "First Page Rankings" },
     { number: "5 Years", label: "Local SEO Experience" },
   ]
 
   const achievements = [
-    "Helped over 500 local businesses improve their online visibility",
+    "Helped over 100 local businesses improve their online visibility",
     "Generated millions in additional revenue for our clients",
     "Achieved first-page rankings for 90% of target keywords",
     "Maintained 98% client satisfaction rate",
@@ -106,9 +106,9 @@ export default function AboutPage() {
                   That's when we knew we were onto something special.
                 </p>
                 <p>
-                  Today, we've helped hundreds of local businesses across various industries achieve similar success.
-                  From plumbers and dentists to restaurants and retail stores, we've developed proven strategies that
-                  work regardless of your business type.
+                  Today, we've helped over 100 local businesses across various industries achieve similar success. From
+                  plumbers and dentists to restaurants and retail stores, we've developed proven strategies that work
+                  regardless of your business type.
                 </p>
               </div>
             </div>
@@ -137,7 +137,7 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {values.map((value) => {
               const Icon = value.icon
               return (

@@ -7,7 +7,7 @@ export function CTASection() {
   return (
     <section className="py-20 bg-primary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <Card className="bg-background">
+        <Card className="bg-background border-2 border-primary/20">
           <CardContent className="p-12">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
@@ -35,7 +35,7 @@ export function CTASection() {
               </div>
 
               <div className="space-y-6">
-                <div className="bg-muted rounded-lg p-6 text-center">
+                <div className="bg-primary/5 border-2 border-primary/20 rounded-lg p-6 text-center">
                   <div className="text-4xl font-bold text-primary mb-2">FREE</div>
                   <div className="text-lg font-medium text-foreground mb-4">SEO Audit & Consultation</div>
                   <div className="text-muted-foreground mb-6">Usually $500 - Limited time offer</div>

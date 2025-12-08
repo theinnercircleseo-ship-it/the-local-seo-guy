@@ -25,7 +25,6 @@ export default function ContactPage() {
   })
 
   const [isSubmitted, setIsSubmitted] = useState(false)
-  const [showCalendly, setShowCalendly] = useState(false)
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
@@ -113,6 +112,7 @@ export default function ContactPage() {
         </div>
       </section>
 
+      {/* 1. Book a Call (Calendly Section) */}
       <section className="py-16 bg-gradient-to-b from-primary/5 to-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
@@ -139,10 +139,11 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Contact Form & Info Section */}
+      {/* 2. Get in Touch & 3. How to Reach Us (Combined Section) */}
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12">
+            {/* Get in Touch Form */}
             <div>
               <Card>
                 <CardHeader>
@@ -252,7 +253,7 @@ export default function ContactPage() {
               </Card>
             </div>
 
-            {/* Contact Information */}
+            {/* How to Reach Us - Contact Information */}
             <div className="space-y-8">
               <div>
                 <h2 className="text-3xl font-bold text-foreground mb-6">How to Reach Us</h2>
@@ -283,40 +284,47 @@ export default function ContactPage() {
                   )
                 })}
               </div>
-
-              <Card className="bg-primary/5 border-primary/20">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-foreground mb-3">What Happens Next?</h3>
-                  <div className="space-y-3">
-                    <div className="flex items-start space-x-3">
-                      <div className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
-                        1
-                      </div>
-                      <p className="text-foreground">We analyze your website and local SEO performance</p>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
-                        2
-                      </div>
-                      <p className="text-foreground">We research your competitors and local market</p>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
-                        3
-                      </div>
-                      <p className="text-foreground">We send you a detailed audit with actionable recommendations</p>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
-                        4
-                      </div>
-                      <p className="text-foreground">We schedule a call to discuss your SEO strategy</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* 4. What Happens Next Section */}
+      <section className="py-16 bg-gradient-to-b from-background to-primary/5">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Card className="bg-primary/5 border-primary/20">
+            <CardContent className="p-8">
+              <h2 className="text-3xl font-bold text-foreground mb-6 text-center">What Happens Next?</h2>
+              <div className="space-y-4">
+                <div className="flex items-start space-x-4">
+                  <div className="bg-primary text-primary-foreground rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold flex-shrink-0">
+                    1
+                  </div>
+                  <p className="text-foreground text-lg pt-1">We analyze your website and local SEO performance</p>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="bg-primary text-primary-foreground rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold flex-shrink-0">
+                    2
+                  </div>
+                  <p className="text-foreground text-lg pt-1">We research your competitors and local market</p>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="bg-primary text-primary-foreground rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold flex-shrink-0">
+                    3
+                  </div>
+                  <p className="text-foreground text-lg pt-1">
+                    We send you a detailed audit with actionable recommendations
+                  </p>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="bg-primary text-primary-foreground rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold flex-shrink-0">
+                    4
+                  </div>
+                  <p className="text-foreground text-lg pt-1">We schedule a call to discuss your SEO strategy</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </section>
 

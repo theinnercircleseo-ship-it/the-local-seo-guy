@@ -92,7 +92,9 @@ export function ProcessSection() {
         <div className="text-center">
           <div className="bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 rounded-2xl p-8 max-w-4xl mx-auto mb-8">
             <div className="flex items-center justify-center mb-4">
-              <Shield className="w-8 h-8 text-green-600 mr-3" />
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mr-3">
+                <Shield className="w-8 h-8 text-green-600" />
+              </div>
               <h3 className="text-2xl font-bold text-green-800">60-Day Money-Back Guarantee</h3>
             </div>
             <p className="text-green-700 text-lg mb-6 text-balance">

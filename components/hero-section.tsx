@@ -5,10 +5,14 @@ import Link from "next/link"
 export function HeroSection() {
   return (
     <section className="relative bg-primary text-primary-foreground py-20 lg:py-32 overflow-hidden">
-      {/* Abstract Background */}
       <div className="absolute inset-0 z-0">
-        <img src="/abstract-hero-background.png" alt="" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-primary/20" />
+        <img
+          src="/abstract-hero-background.png"
+          alt=""
+          className="w-full h-full object-cover object-left"
+          style={{ objectPosition: "25% center" }}
+        />
+        <div className="absolute inset-0 bg-primary/10" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -57,19 +61,30 @@ export function HeroSection() {
               </Button>
             </div>
 
-            {/* Stats */}
             <div className="grid grid-cols-3 gap-6 pt-8">
               <div className="text-center">
-                <div className="text-3xl font-bold">500+</div>
-                <div className="text-primary-foreground/80">Local Businesses Helped</div>
+                <div className="text-3xl font-bold">100+</div>
+                <div className="text-primary-foreground/80 text-sm">
+                  Local Businesses
+                  <br />
+                  Helped
+                </div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold">300%</div>
-                <div className="text-primary-foreground/80">Average Traffic Increase</div>
+                <div className="text-primary-foreground/80 text-sm">
+                  Average Traffic
+                  <br />
+                  Increase
+                </div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold">90%</div>
-                <div className="text-primary-foreground/80">First Page Rankings</div>
+                <div className="text-primary-foreground/80 text-sm">
+                  First Page
+                  <br />
+                  Ranks
+                </div>
               </div>
             </div>
           </div>
