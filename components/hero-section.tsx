@@ -39,7 +39,12 @@ export function HeroSection() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button asChild size="lg" variant="secondary" className="text-lg px-8 hover:text-primary">
+              <Button
+                asChild
+                size="lg"
+                variant="secondary"
+                className="text-lg px-8 bg-white text-foreground hover:bg-primary-foreground/90 hover:text-primary"
+              >
                 <Link href="/contact">Start Your Free Analysis</Link>
               </Button>
               <Button

@@ -11,7 +11,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Phone, Mail, MapPin, Clock, CheckCircle } from "lucide-react"
+import { Phone, Mail, MapPin, Clock, CheckCircle, Calendar } from "lucide-react"
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -110,6 +110,32 @@ export default function ContactPage() {
             Ready to dominate local search results? Contact us today for a free SEO audit and discover exactly how we
             can help your business grow.
           </p>
+        </div>
+      </section>
+
+      <section className="py-16 bg-gradient-to-b from-primary/5 to-background">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <div className="flex items-center justify-center gap-2 mb-4">
+              <Calendar className="h-8 w-8 text-primary" />
+              <h2 className="text-3xl lg:text-4xl font-bold text-foreground">
+                Book a call with our SEO specialist now
+              </h2>
+            </div>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Schedule a free 30-minute consultation to discuss your business goals and discover how we can help you
+              dominate local search.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-border">
+            <div
+              className="calendly-inline-widget w-full"
+              data-url="https://calendly.com/brunofigueiroacavalcanti/30min?hide_gdpr_banner=1&primary_color=3b82f6"
+              style={{ minWidth: "320px", height: "700px" }}
+            />
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async />
+          </div>
         </div>
       </section>
 

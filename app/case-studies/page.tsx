@@ -12,9 +12,9 @@ export default function CaseStudiesPage() {
       <Navigation />
       <main>
         {/* Hero Section */}
-        <section className="py-12 bg-gradient-to-b from-primary/5 to-background">
+        <section className="py-8 bg-gradient-to-b from-primary/5 to-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-4">
+            <div className="text-center mb-2">
               <Badge variant="outline" className="mb-4 text-primary border-primary/20">
                 Real Results
               </Badge>
@@ -30,7 +30,7 @@ export default function CaseStudiesPage() {
         </section>
 
         {/* Featured Case Study */}
-        <section className="py-8 bg-background">
+        <section className="py-4 bg-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-3xl overflow-hidden border border-blue-100">
               <div className="grid lg:grid-cols-2 gap-12 p-8 lg:p-12">
