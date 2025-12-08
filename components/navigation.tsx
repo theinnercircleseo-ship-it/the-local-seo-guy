@@ -2,11 +2,18 @@
 
 import { useState } from "react"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Menu, X, Phone } from "lucide-react"
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
+  const pathname = usePathname()
+
+  const isActive = (path: string) => {
+    if (path === "/") return pathname === "/"
+    return pathname.startsWith(path)
+  }
 
   return (
     <nav className="bg-background border-b border-border sticky top-0 z-50">
@@ -22,26 +29,51 @@ export function Navigation() {
                 <circle cx="24" cy="20" r="4" fill="white" />
               </svg>
             </div>
-            <span className="font-bold text-xl text-foreground cursor-pointer">
-              The <span className="text-primary">Local SEO</span> Guy
+            <span className="font-bold text-xl text-foreground cursor-pointer select-none">
+              The <span className="text-primary cursor-pointer select-none">Local SEO</span> Guy
             </span>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="/services" className="text-foreground hover:text-primary transition-colors">
+            <Link
+              href="/services"
+              className={`text-foreground hover:text-primary transition-colors pb-1 ${
+                isActive("/services") ? "border-b-2 border-primary text-primary font-medium" : ""
+              }`}
+            >
               Services
             </Link>
-            <Link href="/about" className="text-foreground hover:text-primary transition-colors">
+            <Link
+              href="/about"
+              className={`text-foreground hover:text-primary transition-colors pb-1 ${
+                isActive("/about") ? "border-b-2 border-primary text-primary font-medium" : ""
+              }`}
+            >
               About
             </Link>
-            <Link href="/pricing" className="text-foreground hover:text-primary transition-colors">
+            <Link
+              href="/pricing"
+              className={`text-foreground hover:text-primary transition-colors pb-1 ${
+                isActive("/pricing") ? "border-b-2 border-primary text-primary font-medium" : ""
+              }`}
+            >
               Pricing
             </Link>
-            <Link href="/case-studies" className="text-foreground hover:text-primary transition-colors">
+            <Link
+              href="/case-studies"
+              className={`text-foreground hover:text-primary transition-colors pb-1 ${
+                isActive("/case-studies") ? "border-b-2 border-primary text-primary font-medium" : ""
+              }`}
+            >
               Case Studies
             </Link>
-            <Link href="/contact" className="text-foreground hover:text-primary transition-colors">
+            <Link
+              href="/contact"
+              className={`text-foreground hover:text-primary transition-colors pb-1 ${
+                isActive("/contact") ? "border-b-2 border-primary text-primary font-medium" : ""
+              }`}
+            >
               Contact
             </Link>
             <div className="flex items-center space-x-2 text-muted-foreground">
@@ -67,35 +99,45 @@ export function Navigation() {
             <div className="px-2 pt-2 pb-3 space-y-1 bg-background border-t border-border">
               <Link
                 href="/services"
-                className="block px-3 py-2 text-foreground hover:text-primary transition-colors"
+                className={`block px-3 py-2 text-foreground hover:text-primary transition-colors ${
+                  isActive("/services") ? "text-primary font-medium bg-primary/5" : ""
+                }`}
                 onClick={() => setIsOpen(false)}
               >
                 Services
               </Link>
               <Link
                 href="/about"
-                className="block px-3 py-2 text-foreground hover:text-primary transition-colors"
+                className={`block px-3 py-2 text-foreground hover:text-primary transition-colors ${
+                  isActive("/about") ? "text-primary font-medium bg-primary/5" : ""
+                }`}
                 onClick={() => setIsOpen(false)}
               >
                 About
               </Link>
               <Link
                 href="/pricing"
-                className="block px-3 py-2 text-foreground hover:text-primary transition-colors"
+                className={`block px-3 py-2 text-foreground hover:text-primary transition-colors ${
+                  isActive("/pricing") ? "text-primary font-medium bg-primary/5" : ""
+                }`}
                 onClick={() => setIsOpen(false)}
               >
                 Pricing
               </Link>
               <Link
                 href="/case-studies"
-                className="block px-3 py-2 text-foreground hover:text-primary transition-colors"
+                className={`block px-3 py-2 text-foreground hover:text-primary transition-colors ${
+                  isActive("/case-studies") ? "text-primary font-medium bg-primary/5" : ""
+                }`}
                 onClick={() => setIsOpen(false)}
               >
                 Case Studies
               </Link>
               <Link
                 href="/contact"
-                className="block px-3 py-2 text-foreground hover:text-primary transition-colors"
+                className={`block px-3 py-2 text-foreground hover:text-primary transition-colors ${
+                  isActive("/contact") ? "text-primary font-medium bg-primary/5" : ""
+                }`}
                 onClick={() => setIsOpen(false)}
               >
                 Contact

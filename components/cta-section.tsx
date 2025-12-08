@@ -44,7 +44,7 @@ export function CTASection() {
                     <Button
                       asChild
                       size="lg"
-                      className="w-full text-lg bg-orange-700 hover:bg-orange-800 text-primary-foreground"
+                      className="w-full text-lg bg-green-600 hover:bg-green-700 text-primary-foreground"
                     >
                       <Link href="/contact">Get Your Free Audit Now</Link>
                     </Button>

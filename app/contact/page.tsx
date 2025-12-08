@@ -120,7 +120,7 @@ export default function ContactPage() {
             <div>
               <Card>
                 <CardHeader>
-                  <CardTitle className="text-2xl">Get Started Today</CardTitle>
+                  <CardTitle className="text-2xl">Get in Touch</CardTitle>
                   <p className="text-muted-foreground">
                     Fill out the form below and we'll send you a comprehensive SEO audit within 24 hours.
                   </p>
@@ -135,6 +135,7 @@ export default function ContactPage() {
                           value={formData.name}
                           onChange={(e) => handleInputChange("name", e.target.value)}
                           required
+                          className="border-2 border-input bg-background"
                         />
                       </div>
                       <div className="space-y-2">
@@ -145,6 +146,7 @@ export default function ContactPage() {
                           value={formData.email}
                           onChange={(e) => handleInputChange("email", e.target.value)}
                           required
+                          className="border-2 border-input bg-background"
                         />
                       </div>
                     </div>
@@ -157,6 +159,7 @@ export default function ContactPage() {
                           type="tel"
                           value={formData.phone}
                           onChange={(e) => handleInputChange("phone", e.target.value)}
+                          className="border-2 border-input bg-background"
                         />
                       </div>
                       <div className="space-y-2">
@@ -166,6 +169,7 @@ export default function ContactPage() {
                           value={formData.business}
                           onChange={(e) => handleInputChange("business", e.target.value)}
                           required
+                          className="border-2 border-input bg-background"
                         />
                       </div>
                     </div>
@@ -178,13 +182,14 @@ export default function ContactPage() {
                         placeholder="https://yourwebsite.com"
                         value={formData.website}
                         onChange={(e) => handleInputChange("website", e.target.value)}
+                        className="border-2 border-input bg-background"
                       />
                     </div>
 
                     <div className="space-y-2">
                       <Label htmlFor="service">Service Interested In</Label>
                       <Select onValueChange={(value) => handleInputChange("service", value)}>
-                        <SelectTrigger>
+                        <SelectTrigger className="border-2 border-input bg-background">
                           <SelectValue placeholder="Select a service" />
                         </SelectTrigger>
                         <SelectContent>
@@ -205,6 +210,7 @@ export default function ContactPage() {
                         placeholder="Describe your business, current challenges, and what you hope to achieve with SEO..."
                         value={formData.message}
                         onChange={(e) => handleInputChange("message", e.target.value)}
+                        className="border-2 border-input bg-background"
                       />
                     </div>
 
@@ -223,7 +229,7 @@ export default function ContactPage() {
             {/* Contact Information */}
             <div className="space-y-8">
               <div>
-                <h2 className="text-3xl font-bold text-foreground mb-6">Get In Touch</h2>
+                <h2 className="text-3xl font-bold text-foreground mb-6">How to Reach Us</h2>
                 <p className="text-muted-foreground mb-8">
                   Have questions? We're here to help. Reach out to us using any of the methods below, and we'll get back
                   to you as soon as possible.

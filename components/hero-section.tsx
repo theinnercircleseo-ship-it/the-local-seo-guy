@@ -8,7 +8,7 @@ export function HeroSection() {
       {/* Abstract Background */}
       <div className="absolute inset-0 z-0">
         <img src="/abstract-hero-background.png" alt="" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-primary/40" />
+        <div className="absolute inset-0 bg-primary/20" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -39,7 +39,7 @@ export function HeroSection() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button asChild size="lg" variant="secondary" className="text-lg px-8">
+              <Button asChild size="lg" variant="secondary" className="text-lg px-8 hover:text-primary">
                 <Link href="/contact">Start Your Free Analysis</Link>
               </Button>
               <Button

@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
 import "./globals.css"
+import { ScrollToTop } from "@/components/scroll-to-top"
 
 export const metadata: Metadata = {
   title: "The Local SEO Guy - Local SEO Services That Drive Results",
@@ -19,6 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="font-sans">
+        <ScrollToTop />
         <Suspense fallback={null}>{children}</Suspense>
         <Analytics />
       </body>
