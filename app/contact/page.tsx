@@ -112,7 +112,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* 1. Book a Call (Calendly Section) */}
+      {/* 1. Book a Call (Cal.com Section) */}
       <section className="py-16 bg-gradient-to-b from-primary/5 to-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
@@ -129,12 +129,51 @@ export default function ContactPage() {
           </div>
 
           <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-border">
-            <div
-              className="calendly-inline-widget w-full"
-              data-url="https://calendly.com/brunofigueiroacavalcanti/30min?hide_gdpr_banner=1&primary_color=3b82f6"
-              style={{ minWidth: "320px", height: "700px" }}
+            <div style={{ width: "100%", height: "700px", overflow: "scroll" }} id="my-cal-inline-15min"></div>
+            <script
+              type="text/javascript"
+              dangerouslySetInnerHTML={{
+                __html: `
+                  (function (C, A, L) { 
+                    let p = function (a, ar) { a.q.push(ar); }; 
+                    let d = C.document; 
+                    C.Cal = C.Cal || function () { 
+                      let cal = C.Cal; 
+                      let ar = arguments; 
+                      if (!cal.loaded) { 
+                        cal.ns = {}; 
+                        cal.q = cal.q || []; 
+                        d.head.appendChild(d.createElement("script")).src = A; 
+                        cal.loaded = true; 
+                      } 
+                      if (ar[0] === L) { 
+                        const api = function () { p(api, arguments); }; 
+                        const namespace = ar[1]; 
+                        api.q = api.q || []; 
+                        if(typeof namespace === "string"){
+                          cal.ns[namespace] = cal.ns[namespace] || api;
+                          p(cal.ns[namespace], ar);
+                          p(cal, ["initNamespace", namespace]);
+                        } else p(cal, ar); 
+                        return;
+                      } 
+                      p(cal, ar); 
+                    }; 
+                  })(window, "https://app.cal.com/embed/embed.js", "init");
+                  Cal("init", "15min", {origin:"https://app.cal.com"});  
+                  Cal.ns["15min"]("inline", {    
+                    elementOrSelector:"#my-cal-inline-15min",    
+                    config: {"layout":"month_view"},    
+                    calLink: "bruno-pedro-zb4myr/15min",  
+                  });  
+                  Cal.ns["15min"]("ui", {
+                    "cssVarsPerTheme":{"light":{"cal-brand":"#434fd8"}},
+                    "hideEventTypeDetails":false,
+                    "layout":"month_view"
+                  });
+                `,
+              }}
             />
-            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async />
           </div>
         </div>
       </section>
