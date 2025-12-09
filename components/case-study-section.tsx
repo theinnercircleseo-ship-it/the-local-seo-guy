@@ -62,7 +62,8 @@ export function CaseStudySection() {
                 {/* After */}
                 <div className="p-8 bg-green-50">
                   <div className="text-center mb-6">
-                    <Badge className="mb-3 bg-green-600 text-white">After 30 Days</Badge>
+                    {/* Removed hover effects from badge */}
+                    <Badge className="mb-3 bg-green-600 text-white hover:bg-green-600">After 30 Days</Badge>
                     <h3 className="text-xl font-semibold text-foreground mb-2">Dominating Local Search</h3>
                     <p className="text-muted-foreground text-sm">Consistent top rankings across the market</p>
                   </div>

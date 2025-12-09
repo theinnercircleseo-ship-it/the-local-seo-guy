@@ -12,6 +12,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Phone, Mail, MapPin, Clock, CheckCircle, Calendar } from "lucide-react"
+import { CalEmbed } from "@/components/cal-embed"
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -112,7 +113,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* 1. Book a Call (Calendly Section) */}
+      {/* 1. Book a Call (Cal.com Section) */}
       <section className="py-12 bg-gradient-to-b from-primary/5 to-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
@@ -128,13 +129,9 @@ export default function ContactPage() {
             </p>
           </div>
 
+          {/* Replace Calendly with Cal.com embed */}
           <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-border">
-            <div
-              className="calendly-inline-widget"
-              data-url="https://calendly.com/your-calendly-link?hide_event_type_details=1&hide_gdpr_banner=1"
-              style={{ minWidth: "320px", height: "700px" }}
-            ></div>
-            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+            <CalEmbed />
           </div>
         </div>
       </section>
