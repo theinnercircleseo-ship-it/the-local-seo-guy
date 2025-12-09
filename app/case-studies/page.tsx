@@ -113,8 +113,9 @@ export default function CaseStudiesPage() {
                   </div>
 
                   <div className="bg-white rounded-xl p-6 shadow-lg">
-                    <h3 className="font-semibold text-lg mb-4 text-center text-green-600">
-                      After - Average Rank: 3.57
+                    <h3 className="font-semibold text-lg mb-4 text-center">
+                      <span className="text-green-600">After</span> - Average Rank:{" "}
+                      <span className="text-green-600">3.57</span>
                     </h3>
                     <Image
                       src="/images/image-20-2814-29.png"

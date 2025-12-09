@@ -8,7 +8,7 @@ export function CaseStudySection() {
     <section className="py-16 bg-muted/50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <Badge className="mb-4 text-foreground bg-green-100 border-green-200">
+          <Badge className="mb-4 text-foreground bg-green-100 border-green-200 hover:bg-green-100">
             <TrendingUp className="w-4 h-4 mr-2" />
             Case Study
           </Badge>

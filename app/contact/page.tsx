@@ -113,7 +113,7 @@ export default function ContactPage() {
       </section>
 
       {/* 1. Book a Call (Cal.com Section) */}
-      <section className="py-16 bg-gradient-to-b from-primary/5 to-background">
+      <section className="py-12 bg-gradient-to-b from-primary/5 to-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <div className="flex items-center justify-center gap-2 mb-4">
@@ -134,43 +134,14 @@ export default function ContactPage() {
               type="text/javascript"
               dangerouslySetInnerHTML={{
                 __html: `
-                  (function (C, A, L) { 
-                    let p = function (a, ar) { a.q.push(ar); }; 
-                    let d = C.document; 
-                    C.Cal = C.Cal || function () { 
-                      let cal = C.Cal; 
-                      let ar = arguments; 
-                      if (!cal.loaded) { 
-                        cal.ns = {}; 
-                        cal.q = cal.q || []; 
-                        d.head.appendChild(d.createElement("script")).src = A; 
-                        cal.loaded = true; 
-                      } 
-                      if (ar[0] === L) { 
-                        const api = function () { p(api, arguments); }; 
-                        const namespace = ar[1]; 
-                        api.q = api.q || []; 
-                        if(typeof namespace === "string"){
-                          cal.ns[namespace] = cal.ns[namespace] || api;
-                          p(cal.ns[namespace], ar);
-                          p(cal, ["initNamespace", namespace]);
-                        } else p(cal, ar); 
-                        return;
-                      } 
-                      p(cal, ar); 
-                    }; 
-                  })(window, "https://app.cal.com/embed/embed.js", "init");
-                  Cal("init", "15min", {origin:"https://app.cal.com"});  
-                  Cal.ns["15min"]("inline", {    
-                    elementOrSelector:"#my-cal-inline-15min",    
-                    config: {"layout":"month_view"},    
-                    calLink: "bruno-pedro-zb4myr/15min",  
-                  });  
-                  Cal.ns["15min"]("ui", {
-                    "cssVarsPerTheme":{"light":{"cal-brand":"#434fd8"}},
-                    "hideEventTypeDetails":false,
-                    "layout":"month_view"
+                  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+                  Cal("init", "15min", {origin:"https://app.cal.com"});
+                  Cal.ns["15min"]("inline", {
+                    elementOrSelector:"#my-cal-inline-15min",
+                    config: {"layout":"month_view"},
+                    calLink: "bruno-pedro-zb4myr/15min",
                   });
+                  Cal.ns["15min"]("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#434fd8"}},"hideEventTypeDetails":false,"layout":"month_view"});
                 `,
               }}
             />
@@ -179,7 +150,7 @@ export default function ContactPage() {
       </section>
 
       {/* 2. Get in Touch & 3. How to Reach Us (Combined Section) */}
-      <section className="py-20 bg-background">
+      <section className="py-12 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Get in Touch Form */}
@@ -330,7 +301,7 @@ export default function ContactPage() {
       </section>
 
       {/* 4. What Happens Next Section */}
-      <section className="py-16 bg-gradient-to-b from-background to-primary/5">
+      <section className="py-12 bg-gradient-to-b from-background to-primary/5 mb-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <Card className="bg-primary/5 border-primary/20">
             <CardContent className="p-8">
