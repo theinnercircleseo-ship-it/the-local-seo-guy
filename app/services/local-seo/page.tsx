@@ -47,12 +47,15 @@ export default function LocalSEOPage() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="bg-primary text-primary-foreground py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img src="/gradient-background.jpg" alt="" className="w-full h-full object-cover" />
+        </div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <h1 className="text-4xl lg:text-5xl font-bold text-balance">Local SEO Services</h1>
-              <p className="text-xl text-primary-foreground/90 text-pretty">
+              <h1 className="text-4xl lg:text-5xl font-bold text-balance text-white">Local SEO Services</h1>
+              <p className="text-xl text-white/90 text-pretty">
                 Dominate local search results and attract more customers with our comprehensive local SEO strategies.
                 Get found by customers in your area when they need your services most.
               </p>
@@ -64,20 +67,20 @@ export default function LocalSEOPage() {
                   asChild
                   size="lg"
                   variant="outline"
-                  className="border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground hover:text-primary bg-transparent"
+                  className="border-white/20 text-white hover:bg-white hover:text-primary bg-transparent"
                 >
                   <Link href="/contact">Free SEO Audit</Link>
                 </Button>
               </div>
             </div>
-            <div className="bg-background/10 rounded-2xl p-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
               <div className="space-y-4">
-                <div className="text-2xl font-bold">What You Get:</div>
+                <div className="text-2xl font-bold text-white">What You Get:</div>
                 <div className="space-y-2">
                   {benefits.slice(0, 4).map((benefit, index) => (
                     <div key={index} className="flex items-start space-x-3">
                       <CheckCircle className="h-5 w-5 text-green-400 mt-0.5 flex-shrink-0" />
-                      <span className="text-primary-foreground/90">{benefit}</span>
+                      <span className="text-white/90">{benefit}</span>
                     </div>
                   ))}
                 </div>

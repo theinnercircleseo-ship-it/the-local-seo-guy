@@ -12,7 +12,6 @@ import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Phone, Mail, MapPin, Clock, CheckCircle, Calendar } from "lucide-react"
-import { CalEmbed } from "@/components/cal-embed"
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -103,10 +102,13 @@ export default function ContactPage() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="bg-primary text-primary-foreground py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl lg:text-5xl font-bold mb-4 text-balance">Get Your Free SEO Audit</h1>
-          <p className="text-xl text-primary-foreground/90 max-w-3xl mx-auto text-pretty">
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img src="/gradient-background.jpg" alt="" className="w-full h-full object-cover" />
+        </div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl lg:text-5xl font-bold mb-4 text-balance text-white">Get Your Free SEO Audit</h1>
+          <p className="text-xl text-white/90 max-w-3xl mx-auto text-pretty">
             Ready to dominate local search results? Contact us today for a free SEO audit and discover exactly how we
             can help your business grow.
           </p>
@@ -131,7 +133,12 @@ export default function ContactPage() {
 
           {/* Replace Calendly with Cal.com embed */}
           <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-border">
-            <CalEmbed />
+            <div
+              className="calendly-inline-widget"
+              data-url="https://calendly.com/brunofigueiroacavalcanti/30min"
+              style={{ minWidth: "320px", height: "700px" }}
+            />
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
           </div>
         </div>
       </section>

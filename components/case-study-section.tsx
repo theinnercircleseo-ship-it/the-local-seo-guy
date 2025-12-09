@@ -5,8 +5,13 @@ import Image from "next/image"
 
 export function CaseStudySection() {
   return (
-    <section className="py-16 bg-muted/50">
-      <div className="container mx-auto px-4">
+    <section className="relative py-16 overflow-hidden bg-blue-50">
+      <div className="absolute inset-0 z-0">
+        {/* Changed gradient background to soft blue solid color */}
+        {/* <img src="/gradient-background.jpg" alt="" className="w-full h-full object-cover" /> */}
+        {/* <div className="absolute inset-0 bg-white/30" /> */}
+      </div>
+      <div className="relative z-10 container mx-auto px-4">
         <div className="text-center mb-12">
           <Badge className="mb-4 text-foreground bg-green-100 border-green-200 hover:bg-green-100">
             <TrendingUp className="w-4 h-4 mr-2" />

@@ -12,16 +12,16 @@ export default function CaseStudiesPage() {
       <Navigation />
       <main>
         {/* Hero Section */}
-        <section className="py-8 bg-gradient-to-b from-primary/5 to-background">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="relative py-8 overflow-hidden">
+          <div className="absolute inset-0 z-0">
+            <img src="/gradient-background.jpg" alt="" className="w-full h-full object-cover" />
+          </div>
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-2">
-              <Badge variant="outline" className="mb-4 text-primary border-primary/20">
-                Real Results
-              </Badge>
-              <h1 className="text-4xl lg:text-6xl font-bold text-foreground mb-6 text-balance">
-                Local SEO <span className="text-primary">Success Stories</span>
+              <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 text-balance">
+                Local SEO <span className="text-white">Success Stories</span>
               </h1>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-balance">
+              <p className="text-xl text-white max-w-3xl mx-auto text-balance">
                 Discover how we've helped local businesses dominate their markets and achieve incredible ranking
                 improvements in just 30-90 days.
               </p>

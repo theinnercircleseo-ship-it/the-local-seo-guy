@@ -129,10 +129,13 @@ export default function PricingPage() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="bg-primary text-primary-foreground py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl lg:text-5xl font-bold mb-4 text-balance">Simple, Transparent Pricing</h1>
-          <p className="text-xl text-primary-foreground/90 max-w-3xl mx-auto text-pretty">
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img src="/gradient-background.jpg" alt="" className="w-full h-full object-cover" />
+        </div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl lg:text-5xl font-bold mb-4 text-balance text-white">Simple, Transparent Pricing</h1>
+          <p className="text-xl text-white/90 max-w-3xl mx-auto text-pretty">
             Choose the perfect plan for your business. All plans include our core local SEO services with no hidden fees
             or long-term contracts.
           </p>
