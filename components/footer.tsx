@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { MapPin, Phone, Mail } from "lucide-react"
+import Image from "next/image"
 
 export function Footer() {
   return (
@@ -13,22 +14,19 @@ export function Footer() {
               className="inline-flex items-center space-x-3 group hover:text-background transition-colors"
               style={{ cursor: "pointer" }}
             >
-              <div className="relative">
-                <svg width="48" height="48" viewBox="0 0 48 48" className="text-background">
-                  {/* Map pin with proper inner hole */}
-                  <path
-                    d="M24 10c-5.5 0-10 4.5-10 10 0 3.5 10 20 10 20s10-16.5 10-20c0-5.5-4.5-10-10-10z"
-                    fill="currentColor"
-                  />
-                  {/* Inner hole - using fill with the footer background color */}
-                  <circle cx="24" cy="20" r="4" fill="#0a0a0a" />
-                </svg>
+              <div className="relative w-12 h-12">
+                <Image
+                  src="/images/localseoguy-logo-branca.png"
+                  alt="The Local SEO Guy Logo"
+                  width={48}
+                  height={48}
+                  className="object-contain"
+                />
               </div>
               <span className="font-bold text-xl text-background">
                 The <span className="text-blue-400">Local SEO</span> Guy
               </span>
             </Link>
-            {/* </CHANGE> */}
             <p className="text-background/80">
               Helping local businesses dominate search results and grow their customer base through proven SEO
               strategies.

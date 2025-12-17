@@ -5,6 +5,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Menu, X, Phone, ChevronDown } from "lucide-react"
+import Image from "next/image"
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -30,19 +31,20 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="flex items-center space-x-3 cursor-pointer select-none group">
-            <div className="relative">
-              <svg width="48" height="48" viewBox="0 0 48 48" className="text-primary">
-                <path
-                  d="M24 10c-5.5 0-10 4.5-10 10 0 3.5 10 20 10 20s10-16.5 10-20c0-5.5-4.5-10-10-10z"
-                  fill="currentColor"
-                />
-                <circle cx="24" cy="20" r="4" fill="white" />
-              </svg>
+            <div className="relative w-12 h-12">
+              <Image
+                src="/images/localseoguy-logo-1.png"
+                alt="The Local SEO Guy Logo"
+                width={48}
+                height={48}
+                className="object-contain"
+              />
             </div>
             <span className="font-bold text-xl text-foreground cursor-pointer select-none">
               The <span className="text-primary cursor-pointer select-none">Local SEO</span> Guy
             </span>
           </Link>
+          {/* End of logo change */}
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
