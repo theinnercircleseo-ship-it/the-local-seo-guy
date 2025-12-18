@@ -2,7 +2,7 @@
 
 import type React from "react"
 
-import { useState } from "react"
+import { useState, useEffect, useRef } from "react"
 import { MessageCircle, X, Send } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -17,6 +17,30 @@ export function FloatingChatButton() {
     message: "",
     website: "",
   })
+
+  const popupRef = useRef<HTMLDivElement>(null)
+  const buttonRef = useRef<HTMLButtonElement>(null)
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        popupRef.current &&
+        !popupRef.current.contains(event.target as Node) &&
+        buttonRef.current &&
+        !buttonRef.current.contains(event.target as Node)
+      ) {
+        setIsOpen(false)
+      }
+    }
+
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside)
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside)
+    }
+  }, [isOpen])
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
@@ -37,6 +61,7 @@ export function FloatingChatButton() {
   return (
     <>
       <button
+        ref={buttonRef}
         onClick={() => setIsOpen(!isOpen)}
         className="fixed left-6 top-1/2 -translate-y-1/2 z-50 bg-blue-600 hover:bg-blue-700 text-white rounded-full p-4 shadow-lg transition-all duration-300 hover:scale-110"
         aria-label="Open chat"
@@ -45,7 +70,7 @@ export function FloatingChatButton() {
       </button>
 
       {isOpen && (
-        <div className="fixed left-24 top-1/2 -translate-y-1/2 z-40">
+        <div ref={popupRef} className="fixed left-24 top-1/2 -translate-y-1/2 z-40">
           <div className="bg-white rounded-lg shadow-xl max-w-md w-full relative animate-in slide-in-from-left duration-200 overflow-hidden">
             {/* Blue header section */}
             <div className="bg-blue-600 px-6 py-4 flex items-center justify-between">
