@@ -4,6 +4,8 @@ import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
 import "./globals.css"
 import { ScrollToTop } from "@/components/scroll-to-top"
+import { FloatingChatButton } from "@/components/floating-chat-button"
+import { FloatingBookCallButton } from "@/components/floating-book-call-button"
 
 export const metadata: Metadata = {
   title: "The Local SEO Guy - Local SEO Services That Drive Results",
@@ -21,6 +23,8 @@ export default function RootLayout({
     <html lang="en">
       <body className="font-sans">
         <ScrollToTop />
+        <FloatingChatButton />
+        <FloatingBookCallButton />
         <Suspense fallback={null}>{children}</Suspense>
         <Analytics />
       </body>

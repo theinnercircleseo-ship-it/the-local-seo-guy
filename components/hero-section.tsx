@@ -12,7 +12,7 @@ export function HeroSection() {
           className="w-full h-full object-cover object-left"
           style={{ objectPosition: "15% center" }}
         />
-        <div className="absolute inset-0 bg-primary/10" />
+        <div className="absolute inset-0 bg-primary/40" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -25,7 +25,7 @@ export function HeroSection() {
                 <br />
                 Dominate Local Search.
               </h1>
-              <p className="text-xl lg:text-2xl text-primary-foreground/90 text-pretty">
+              <p className="text-xl lg:text-2xl text-primary-foreground text-pretty">
                 We analyze your business, find quick wins, and implement proven strategies to get you ranking #1. See
                 results in 60 days or get your money back.
               </p>
